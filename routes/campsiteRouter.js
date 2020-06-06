@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Campsite = require('../models/campsite');
 
-const campsiteRouter = express.Router();
+const campsiteRouter = express.Router();    
 
 campsiteRouter.use(bodyParser.json());
 
@@ -69,7 +69,7 @@ campsiteRouter.route('/:campsiteId')
         res.json(campsite);
     })
     .catch(err => next(err));
-})
+}) 
 
 .delete((req, res, next) => {
     Campsite.findByIdAndDelete(req.params.campsiteId)

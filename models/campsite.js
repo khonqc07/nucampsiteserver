@@ -42,7 +42,7 @@ const campsiteSchema = new Schema({
         required: true
     },
     cost: {
-        type: Currency,
+        type: Currency, 
         required: true,
         min: 0
     },

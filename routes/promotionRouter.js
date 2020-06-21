@@ -6,7 +6,7 @@ const cors = require('./cors');
 
 const promotionRouter = express.Router();
 
-promotionRouter.use(bodyParser.json());
+promotionRouter.use(bodyParser.json()); 
 
 promotionRouter.route('/')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
